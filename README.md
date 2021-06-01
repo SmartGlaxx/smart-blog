@@ -1,0 +1,2 @@
+# smart-blog
+A blog
