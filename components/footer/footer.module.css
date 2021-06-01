@@ -1,0 +1,20 @@
+.main {
+  width: 100%;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 10rem;
+  margin-top: 5rem;
+  background: #eee;
+  font-family: 'Cinzel' ,verdana;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-top: 2rem
+}

@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content : space-between;
+    /* background: green; */
+    padding: 0rem 2rem;
+    height: 4rem;
+    font-size: 1.1rem;
+    color: #444;
+    font-family: 'Cinzel' ,verdana;
+    position: fixed; 
+    width: 100%; 
+    top: 0rem; 
+    z-index: 2;
+    background: #eee
+}
+.title{
+    font-size: 1.4rem;
+    cursor: pointer
+}
+.headerList{
+    display: flex;
+    /* background: blue; */
+    
+}
+.headerListItems{
+    list-style-type: none;
+    margin: 0 1rem;
+    cursor: pointer
+}
+
