@@ -28,4 +28,50 @@
     margin: 0 1rem;
     cursor: pointer
 }
-
+.overlay{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left:0;
+    background: rgba(10, 10, 10, 0.8); 
+}
+.menuNav{
+    width: 80%; 
+    height: 100vh;
+    background: rgba(30, 30, 30, 0.9); 
+    position: absolute;
+    top: 0;
+    left:0;
+    transition:  all 0.3s
+}
+.menuUl{
+    display: block;
+    margin-top: 5rem;
+    
+}
+.menuListItems{
+    cursor: pointer;
+    color: white;
+    list-style-type: none
+}
+.menuicon{
+    cursor: pointer;
+    display: none;
+    padding: 0.2rem
+}
+.close{
+    cursor: pointer;
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 0.2rem;
+    color: red
+}
+@media screen and (max-width: 767px){
+   .menuicon{ display: block}
+}
+@media screen and (max-width: 767px){
+   .title{ font-size: 0.8rem}
+   .headerList{display: none}
+}

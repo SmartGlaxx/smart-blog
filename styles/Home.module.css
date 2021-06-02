@@ -98,6 +98,11 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+.postbody, .title{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .belowNav{
     height: 3rem;
     width: 100%;
@@ -110,14 +115,42 @@
     position: absolute;
     top: 4rem
 }
+.btnContainer{
+  display:flex;
+  float: right;
+  position:relative
+}
+.buttonEdit{
+  border:none;
+  background: inherit;
+  position: absolute;
+  bottom: -0.8rem;
+  right: 2rem
+}
+.buttonDelete{
+  border:none;
+  background: inherit;
+  position: absolute;
+  bottom: -0.8rem;
+  right: 0rem
+}
+.edit{
+  color: orange;
+  font-size: 1.2rem;
+  
+}
 
-.innerContainer{
-  /* max-height: calc(100vh - 5rem); */
+.delete{
+  color: #d44;
+  font-size: 1.2rem
   
 }
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .title{
+    font-size: 0.9rem
   }
 }

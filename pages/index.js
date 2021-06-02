@@ -10,6 +10,7 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import EditIcon from '@material-ui/icons/Edit';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Icon } from '@material-ui/core';
+import {FaTrash, FaEdit} from "react-icons/fa"
 
 export default function Home() {
   const [data, setData] = useState([])
@@ -50,22 +51,6 @@ export default function Home() {
   //  const updateArray = [{"propertyName": "title" , "propertyValue": "A Meeting bag"}]
 
     router.push(`/update/${postid}`)
-
-          // await Axios.patch('https://blog-api-live.herokuapp.com/60b64af0fc8aa300046c43ca' ,{ "title" : "A Meeting bag"})
-          //   .then(result =>{
-          //       router.replace("/");
-          //       setReload(prev =>{
-          //         return !prev
-          //       })
-          //   })
-          //   .catch(error=>{
-          //       setError(true)
-          //       alert(error)
-          //       setTimeout(() => {
-          //           setError(false)
-          //       }, 5000);
-          //   })
-
     }
 
   useEffect(() => {
@@ -87,7 +72,7 @@ export default function Home() {
       </Head>
 
       
-      
+
       <div className={styles.belowNav} >
           {/* <span>WELCOME TO SMART'S <span>JavaScript</span> BLOG</span> */}
        <span><NavLink href='./add-post'> Add Post</NavLink></span>
@@ -95,25 +80,23 @@ export default function Home() {
     <main className='page' >
       
 {  loading ?
-<div 
-style={{display: 'grid', placeItems: 'center', width: '100%', height:'100%'}}
-><CircularProgress /></div>
+<div className='spinner'><CircularProgress /></div>
 :
 <div>
-      {data.map(post =>{
+      {data.reverse().map(post =>{
         const {_id, title, postbody} = post
         
         return (<div className='post'>
         <Link href={`/${_id}`} >
         <div key={_id} className=''>
-        <h4>{title}</h4>
-        <p>{postbody}</p>
+       <h3>{title}</h3>
+        <p className={styles.postbody}>{postbody}</p>
         
         </div>
          </Link>
-         <div style={{display: 'flex', float: 'right'}}>
-         <button onClick={()=>editPost(_id)}>EDIT</button>
-        <button onClick={()=>deletePost(_id)}>DELETE</button>
+         <div className={styles.btnContainer}>
+         <button className={styles.buttonEdit} onClick={()=>editPost(_id)}><FaEdit className={styles.edit} /></button>
+        <button className={styles.buttonDelete} onClick={()=>deletePost(_id)}><FaTrash className={styles.delete} /></button>
          </div>
          </div>)
       })}
