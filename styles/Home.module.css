@@ -92,6 +92,7 @@
   margin-left: 0.5rem;
 }
 .postbody, .title{
+  font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
