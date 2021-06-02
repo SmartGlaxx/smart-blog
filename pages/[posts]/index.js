@@ -34,7 +34,7 @@ const Post = ()=>{
     if(loading==true){
     return  <div className='spinner' ><CircularProgress /></div>
     }
-    return <div style={{ height:"100vh", paddingTop:"5rem", margin: '0 auto', width: "80%"}}>
+    return <div className='page'>
       <h2>{title}</h2>
       <p>{postbody}</p>
     </div>
