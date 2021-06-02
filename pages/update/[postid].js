@@ -66,13 +66,13 @@ const Update = ()=>{
     }
      
     const {_id, title, postbody} = page
-console.log('page', page)
-    return <div className='page'>
+
+    return <div className='formpage'>
             <h3>Edit Post</h3>
        <form onSubmit ={(e)=>e.preventDefault()}>
-        <label htmlFor='title'>Post Title</label>
+        <label htmlFor='title' className='label'>Post Title</label>
         <input type ='text' name ='title' id='title' className='input' value={title} onChange={setUpdateBalues}/><br />
-        <label htmlFor='post'>Post</label>
+        <label htmlFor='post' className='label'>Post</label>
         <TextareaAutosize aria-label="minimum height"  name='postbody'  id='post' className='textarea' rowsMin={3} value={postbody} onChange={setUpdateBalues} />
         <div className='btn-container'>
         <MyButton variant="contained" color="primary" type='submit' onClick={()=>editPost(_id, title, postbody)}>Edit Post</MyButton>

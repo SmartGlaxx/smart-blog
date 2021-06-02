@@ -35,24 +35,18 @@ const AddPost =()=>{
     })
     }
 
-    return <div className='page'>
+    return <div className='formpage'>
     <div className='addpost'>
     {error && <div>Post already exists. Please edit it or try a new post title.</div>}
     <form onSubmit ={(e)=>e.preventDefault()}>
-        <label htmlFor='title'>Post Title</label>
+        <label htmlFor='title' className='label'>Post Title</label>
         <input type ='text' name ='title' id='title' className='input' ref={inputRef}/><br />
-        <label htmlFor='post'>Post</label>
+        <label htmlFor='post' className='label'>Post</label>
         <TextareaAutosize aria-label="minimum height"  name='postbody'  id='post' className='textarea' rowsMin={3} ref ={textAreaRef} />
         <div className='btn-container'>
         <MyButton variant="contained" color="primary" type='submit' onClick={addNewPost}>Add Post</MyButton>
         </div>
     </form>
-    NEW
-    {/* <FormControl>
-  <InputLabel htmlFor="my-input">Email address</InputLabel>
-  <Input id="my-input" aria-describedby="my-helper-text" />
-  <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-</FormControl> */}
     </div>
     </div>
 }

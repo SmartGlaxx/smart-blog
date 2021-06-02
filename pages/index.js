@@ -10,7 +10,7 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import EditIcon from '@material-ui/icons/Edit';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Icon } from '@material-ui/core';
-import {FaTrash, FaEdit} from "react-icons/fa"
+import {FaTrash, FaEdit, FaPlus} from "react-icons/fa"
 
 export default function Home() {
   const [data, setData] = useState([])
@@ -75,9 +75,9 @@ export default function Home() {
 
       <div className={styles.belowNav} >
           {/* <span>WELCOME TO SMART'S <span>JavaScript</span> BLOG</span> */}
-       <span><NavLink href='./add-post'> Add Post</NavLink></span>
+       <div className='addbtn'><NavLink href='./add-post'><FaPlus /></NavLink></div>
     </div>
-    <main className='page' >
+    <div className='page' >
       
 {  loading ?
 <div className='spinner'><CircularProgress /></div>
@@ -89,7 +89,7 @@ export default function Home() {
         return (<div className='post'>
         <Link href={`/${_id}`} >
         <div key={_id} className=''>
-       <h3>{title}</h3>
+       <h3 className={styles.title}>{title}</h3>
         <p className={styles.postbody}>{postbody}</p>
         
         </div>
@@ -103,7 +103,7 @@ export default function Home() {
   </div>
   }
       
-      </main>
+      </div>
     </div>
   )
 }
