@@ -72,6 +72,6 @@
    .menuicon{ display: block}
 }
 @media screen and (max-width: 767px){
-   .title{ font-size: 1rem}
+   .title{ font-size: 1.2rem}
    .headerList{display: none}
 }
